@@ -1,0 +1,63 @@
+* {
+    font-family: "SF Pro";
+    font-size: 14px;
+    border: none;
+    border-radius: 0;
+  }
+  
+  window#waybar {
+    background-color: transparent; 
+    border-radius: 8px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  #workspaces {
+    margin: 0 4px;
+  }
+  
+  #workspaces button {
+    padding: 0 8px;
+    color: rgba(255, 230, 0, 0.938);
+    background: transparent;
+    transition: all 0.2s ease;
+  }
+  
+  #workspaces button:hover {
+    background: rgba(203, 166, 247, 0.2);
+    border-radius: 7px;
+  }
+  
+  #workspaces button.active {
+    background-color: rgba(255, 230, 0, 0.938);
+    font-weight: bold;
+    color: rgba(36, 36, 36, 0.938);
+    border: 3px solid rgba(36, 36, 36, 0.938);;
+    border-radius: 7px;
+  }
+  
+  #workspaces button.urgent {
+    background-color: #f38ba8;
+  }
+  
+  #clock,
+  #bluetooth,
+  #tray,
+  #battery,
+  #network,
+  #pulseaudio {
+    padding: 0 12px;  /* Aumentado de 10px para 12px */
+    color: rgba(255, 230, 0, 0.938);
+    border: 1px solid rgba(255, 230, 0, 0.938);  /* Fundo mais consistente */
+    background-color: rgba(36, 36, 36, 0.938);
+    margin: 4px 2px;  /* Espaçamento entre módulos */
+    border-radius: 4px;  /* Bordas arredondadas nos módulos */
+  }
+  
+  #tray {
+    background-color: transparent;  /* Tray transparente para melhor integração */
+  }
+  
+  #clock {
+    font-weight: bold;  /* Relógio em negrito */
+    margin: 4px 0;  /* Espaçamento ajustado */
+  }

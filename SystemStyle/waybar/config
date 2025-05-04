@@ -1,0 +1,96 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    "modules-left": ["hyprland/workspaces", "sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["bluetooth", "tray", "pulseaudio", "network", "battery", "battery#bat1", "power-menu"],
+  
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%d/%m/%Y}",
+        "timezone": "America/Sao_Paulo",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "months":     "<span color='#cecece'><b>{}</b></span>",
+                "days":       "<span color='#dadada'><b>{}</b></span>",
+                "weekdays":   "<span color='#cecece'><b>{}</b></span>",
+                "today":      "<span color='#ffffff'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+    "battery": {
+        "bat":"BAT0",
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": [" ", " ", " ", " ", " "],
+        "tooltip-format": "{time}",
+        "interval": 1,
+        "on-click": "control -B"
+    },
+    "battery#bat1": {
+        "bat":"BAT1",
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": [" ", " ", " ", " ", " "],
+        "tooltip-format": "{time}",
+        "interval": 1,
+        "on-click": "control -B"
+    },
+    "network": {
+        "format-wifi": "   {essid} ({signalStrength}%)",
+        "format-ethernet": "󰈀  Connected",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "format-linked": "  {ifname} (No IP)",
+        "format-disconnected": "  Disconnected",
+        "on-click": "kitty -e nmtui"
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-bluetooth-muted": "󰝟  Muted",
+        "format-muted": "󰝟  Muted",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": "  ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": ["", " ", "  "]
+        },
+        "on-click": "pavucontrol"
+    },
+    "bluetooth": {
+      "format": " On",
+      "format-disabled": "󰂲 Off",
+      "format-connected": "󰂱 Connected",
+      "on-click": "control -b"
+    },
+    "power-menu": {
+      "format": "Off",
+      "tooltip": false,
+      "on-click": "bash -c 'option=$(echo -e \"Desligar\nReiniciar\nSuspender\nSair da sessão\" | wofi --dmenu -p \"Power Menu\") && case \"$option\" in \"Desligar\") systemctl poweroff;; \"Reiniciar\") systemctl reboot;; \"Suspender\") systemctl suspend;; \"Sair da sessão\") hyprctl dispatch exit;; esac'"
+    }
+  }
