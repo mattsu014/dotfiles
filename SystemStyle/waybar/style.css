@@ -45,19 +45,19 @@
   #battery,
   #network,
   #pulseaudio {
-    padding: 0 12px;  /* Aumentado de 10px para 12px */
+    padding: 0 12px;
     color: rgba(255, 230, 0, 0.938);
-    border: 1px solid rgba(255, 230, 0, 0.938);  /* Fundo mais consistente */
+    border: 1px solid rgba(255, 230, 0, 0.938);
     background-color: rgba(36, 36, 36, 0.938);
-    margin: 4px 2px;  /* Espaçamento entre módulos */
-    border-radius: 4px;  /* Bordas arredondadas nos módulos */
+    margin: 4px 2px;
+    border-radius: 4px;
   }
   
   #tray {
-    background-color: transparent;  /* Tray transparente para melhor integração */
+    background-color: transparent;
   }
   
   #clock {
-    font-weight: bold;  /* Relógio em negrito */
-    margin: 4px 0;  /* Espaçamento ajustado */
+    font-weight: bold;
+    margin: 4px 0;
   }

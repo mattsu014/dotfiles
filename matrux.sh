@@ -1,5 +1,36 @@
 #!/bin/bash
 
+configure_custom_bashrc() {
+    local backup_file="$HOME/.bashrc.bak-$(date +%Y%m%d%H%M%S)"
+    if [ -f "$HOME/.bashrc" ]; then
+        cp "$HOME/.bashrc" "$backup_file"
+        echo "Backup criado: $backup_file"
+    fi
+
+    cat > "$HOME/.bashrc" << 'BASHRC_CONTENT'
+#
+# ~/.bashrc
+#
+
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+set_prompt() {
+    if [[ "$PWD" == "$HOME" ]]; then
+        PS1='\[\033[1;32m\]>>\[\033[0m\] '
+    else
+        PS1='\[\033[1;32m\]>\[\033[0m\] \[\033[1;34m\]\W\[\033[0m\] \[\033[1;32m\]>>\[\033[0m\] '
+    fi
+}
+PROMPT_COMMAND=set_prompt
+BASHRC_CONTENT
+
+    echo "Configuração aplicada com sucesso!"
+    echo "Execute 'source ~/.bashrc' para carregar as alterações no terminal atual."
+}
+
 basics_packages() {
     sudo pacman -S --noconfirm ttf-dejavu noto-fonts noto-fonts-emoji ttf-liberation
     sudo pacman -S --noconfirm ttf-font-awesome
@@ -7,8 +38,11 @@ basics_packages() {
     sudo pacman -S --noconfirm hyprland kitty
     sudo pacman -S --noconfirm xdg-desktop-portal xdg-desktop-portal-hyprland
     sudo pacman -S --noconfirm cargo
+    mkdir -p ~/.config/hypr
     cp -f ~/dotfiles/SystemStyle/hypr/hyprland.conf ~/.config/hypr/hyprland.conf
+    mkdir -p ~/.config/kitty
     cp -r ~/dotfiles/SystemStyle/kitty ~/.config/
+    configure_custom_bashrc
 }
 
 nvidia_packages() {
@@ -167,6 +201,7 @@ EOF
 
 waybar_style() {
     sudo pacman -S --noconfirm waybar
+    sudo pacman -S --noconfirm pavucontrol
     mkdir -p ~/.config/waybar
     cp -r ~/dotfiles/SystemStyle/waybar ~/.config/
 }
@@ -180,19 +215,9 @@ wallpaper = ,~/dotfiles/SystemStyle/wallpaper.jpg
 EOF
 }
 
-extra_programs() {
-    sudo pacman -S --noconfirm discord
-    sudo pacman -S --noconfirm flatpak
-    sudo pacman -S --noconfirm udisks2
-    sudo pacman -S --noconfirm pavucontrol
-    sudo pacman -S --noconfirm tlp tlp-rdw
-}
-
-
-
 echo "Hi, Welcome to Matrux install"
 
-echo "Install Basics Packages?"
+echo "Install Hyprland Basics Packages? (Kitty, Hyprland, noto-fonts...)"
 select option in "Yes" "No"; do
     case $option in
         "Yes") basics_packages; break ;;
@@ -249,7 +274,7 @@ select option in "Yes" "No"; do
     esac
 done
 
-echo "Install Waybar Style?"
+echo "Install Waybar?"
 select option in "Yes" "No"; do
     case $option in
         "Yes") waybar_style; break ;;
@@ -257,7 +282,7 @@ select option in "Yes" "No"; do
     esac
 done
 
-echo "Install Hyprpaper Style?"
+echo "Install Hyprpaper?"
 select option in "Yes" "No"; do
     case $option in
         "Yes") hyprpaper_config; break ;;
@@ -265,12 +290,36 @@ select option in "Yes" "No"; do
     esac
 done
 
-echo "Install extra programs (discord, flatpak, udisks2, pavucontrol tlp tlp-rdw)?"
+echo "Install Discord?"
 select option in "Yes" "No"; do
     case $option in
-        "Yes") extra_programs; break ;;
+        "Yes") sudo pacman -S --noconfirm discord; break ;;
         "No") break ;;
     esac
 done
 
-echo "Installation complete!"
+echo "Install Flatpak?"
+select option in "Yes" "No"; do
+    case $option in
+        "Yes") sudo pacman -S --noconfirm flatpak; break ;;
+        "No") break ;;
+    esac
+done
+
+echo "Install tlp tlp-rdw?"
+select option in "Yes" "No"; do
+    case $option in
+        "Yes") sudo pacman -S --noconfirm tlp tlp-rdw; break ;;
+        "No") break ;;
+    esac
+done
+
+echo "Install udisks2?"
+select option in "Yes" "No"; do
+    case $option in
+        "Yes") sudo pacman -S --noconfirm udisks2; break ;;
+        "No") break ;;
+    esac
+done
+
+reboot
