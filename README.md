@@ -1,50 +1,80 @@
-# Hyprland Dotfiles
+# 🐧 Arch 95 - Hyprland OS + Windows 95 Theme 🐧
 
-## 🖥️ Sobre
-Este repositório contém meus arquivos de configuração (dotfiles) e personalização para o  meu Hyprland, um compositor Wayland dinâmico e altamente personalizável. Essas configurações refletem meu fluxo de trabalho e preferências estéticas.
+## 🌎 Languages
 
-Eu usei outros dotfiles como base, então eu deixarei as referências no final
+* [Português (Brasil) 🇧🇷](./README-pt-br.md)
 
-## ✨ Recursos
-- **Barra de status**: waybar com tema e módulos personalizados
-- **Aplicativos padrão**:
-  - Terminal: Kitty
-  - Launcher: Rofi
-  - Editor: vscode e nano
-  - Navegador: Brave
+---
 
-## 🛠️ Instalação
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/mattsu014/dotfiles.git
-   ```
-2. Entre no diretório:
-   ```bash
-   cd dotfiles
-   ```
-3. Coloque permissão no arquivo matrux.sh para iniciar a automatização de Instalação
-   ```bash
-   chmod +x matrux.sh
-   ```
-4. Inicie o instalador que irá lhe guiar para os proximos passos
-   ```bash
-   ./matrux.sh
-   ```
+## 🖥️ About
+
+This repository contains my Arch Linux “rice” (custom setup).
+I created this configuration with the goal of recreating the classic Windows 95 aesthetic in a modern, lightweight, and highly customizable environment using Hyprland.
+
+---
+
+## ✨ Packages
+
+### Core Components
+
+* Waybar
+* Rofi
+
+### Main Applications
+
+* **Terminal:** Kitty
+* **Launcher:** Rofi
+* **Editor:** VS Code / Nano
+* **Browser:** Vivaldi (with a custom theme)
+
+---
 
 ## 🎨 Screenshots
-![Image SO](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lcdpobqephhiucfgzihs.png)
 
+![Desktop](./screenshots/osPrint.jpg)
+![Screenshot 1](./screenshots/osPrint1.jpg)
+![Screenshot 2](./screenshots/osPrint2.jpg)
+![Screenshot 3](./screenshots/osPrint3.jpg)
+![Screenshot 4](./screenshots/osPrint4.jpg)
 
-## ⚠️ Aviso
-Estas configurações são pessoais e podem não funcionar perfeitamente em seu sistema sem ajustes. Sinta-se à vontade para forkear e adaptar às suas necessidades.
+---
 
-## ✏️ Inspirações 
-*Inspirado pelo trabalho da comunidade Hyprland. Obrigado a todos os contribuidores!*
+## ⚠️ Warning
 
-Base de cores do Kitty: [Moccha Theme](https://github.com/catppuccin/kitty/blob/main/mocha.conf)
+These configurations may not work correctly on all systems.
+Feel free to customize and adapt everything to fit your setup.
 
-Rofi: [Sonny Box](https://github.com/sonnybox/yt-files/blob/main/SIMPLE%20LAUNCHER/config.rasi)
+---
 
-Artista do Wallpaper: [Sumo](https://x.com/desconjurado/status/1543281129385594881)
+## 🔮 Future Updates
+
+* Automate the installation process
+
+---
+
+## 📁 Structure
+
+```
+.
+├── README.md
+├── screenshots
+│
+└── systemRice
+    ├── fastfetch
+    ├── gtk-3.0
+    ├── hypr
+    ├── kitty
+    ├── rofi
+    └── waybar
+```
+
+---
+## ✏️ Credits
+
+Thanks to the Linux and Hyprland communities for their amazing work ❤️
+
+* **Icons & Theme:** [Chicago95](https://github.com/grassmunk/chicago95)
+
+* **Vivaldi Theme:** [Win95](https://themes.vivaldi.net/themes/x3WlOeREJGY)
 
 

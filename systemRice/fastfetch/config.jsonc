@@ -1,0 +1,28 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+
+  "logo": {
+    "type": "kitty",
+    "source": "/home/mattsu014/Wallpapers/icons/icon1.jpg",
+    "width": 30
+  },
+
+  "modules": [
+    "break",
+    "title",
+    "separator",
+    "os",
+    "kernel",
+    "host",
+    "wm",
+    "packages",
+    "de",
+    "font",
+    "terminal",
+    "cpu",
+    "gpu",
+    "memory",
+    "break",
+    "colors"
+  ]
+}

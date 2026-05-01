@@ -1,0 +1,43 @@
+{
+    "position": "bottom",
+    "height": 30,
+    "spacing": 1,
+    "modules-left": ["custom/start"],
+    "modules-center": [],
+    "modules-right": [
+        "wireplumber",
+        "backlight",
+        "battery",
+        "clock"
+    ],
+    "custom/start": {
+        "format": "       Start",
+        "tooltip": false,
+        "on-click": "exec wofi -m -I --show drun"
+    },
+    "clock": {
+        "timezone": "America/Fortaleza",
+        "interval": 60,
+        "format": "{:%d/%m/%Y | %H:%M}        "
+    },
+    "backlight": {
+        "format": "{percent}%        ",
+        "tooltip": true,
+        "tooltip-format": "{percent}%"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}%        ",
+        "format-charging": "{capacity}%      ",
+        "format-plugged": "{capacity}% "
+    },
+    "wireplumber": {
+        "format": "{volume}%       ",
+        "format-muted": "Mudo",
+        "tooltip": true,
+        "tooltip-format": "Volume: {volume}%"
+    }
+}

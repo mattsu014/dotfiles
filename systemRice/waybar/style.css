@@ -1,0 +1,153 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Sans Serif", "Font Awesome 5 Free";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #c0c0c0;
+    color: #000000;
+    box-shadow: 0px 0px 3px 0px #00000;
+    border-bottom: solid 1px #404040;
+}
+
+#scratchpad {
+    padding: 2px 10px;
+    margin: 2px 3px;
+    min-height: 20px;
+    background: #c0c0c0;
+    color: #000000;
+    border-left: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #404040;
+    box-shadow: 1px 1px 1px 0px #000000;
+}
+
+#workspaces button {
+    padding: 2px 5px;
+    margin: 2px 3px;
+    min-height: 20px;
+    background: #c0c0c0;
+    color: #000000;
+    border-left: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #404040;
+    box-shadow: 1px 1px 1px 0px #000000;
+}
+
+#workspaces button:hover {
+    box-shadow: 0px 0px 0px;
+    text-shadow: none;
+    background: #E0E0E0;
+}
+
+#workspaces button.focused {
+    background: #E0E0E0;
+    color: #000000;
+}
+
+#custom-start {
+    padding: 3px 8px 3px 9px;
+    margin: 2px 3px;
+    min-height: 20px;
+    font-weight: bold;
+    background: url('/home/mattsu014/Chicago95/Icons/Chicago95/places/scalable/start-here.svg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    min-width: 60px;
+    border-left: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #404040;
+    box-shadow: 1px 1px 1px 0px #000000;
+}
+
+#custom-start:active {
+    background: url('/home/mattsu014/Chicago95/Icons/Chicago95/places/scalable/start-here.svg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    box-shadow: 0px 0px 0px;
+    text-shadow: none;
+    background-color: #f0f0f0;
+}
+
+#window {
+    padding: 2px 10px;
+    margin: 2px 3px;
+    min-height: 20px;
+    border-left: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #404040;
+    box-shadow: 1px 1px 1px 0px #000000;
+}
+
+#battery,
+#backlight,
+#wireplumber {
+    padding: 2px 6px;
+    margin: 2px 3px;
+    min-height: 16px;
+    min-width: 50px;
+    background-color: #c0c0c0;
+    color: #000000;
+    font-size: 13px;
+    border-left: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #404040;
+    box-shadow: 1px 1px 1px 0px #000000;
+    background-position: right center;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+#battery {
+    background-image: url('/home/mattsu014/Chicago95/Icons/Chicago95/devices/scalable/battery.svg');
+}
+
+#backlight {
+    background-image: url('/home/mattsu014/Chicago95/Icons/Chicago95/status/scalable/sunny.svg');
+}
+
+#wireplumber {
+    background-image: url('/home/mattsu014/Chicago95/Icons/Chicago95/status/scalable/audio-volume-high.svg');
+}
+
+#pulseaudio {
+    background-image: url('/home/mattsu014/Chicago95/Icons/Chicago95/status/scalable/audio-volume-high.svg');
+}
+
+#memory {
+    background-image: url('/home/mattsu014/Chicago95/Icons/Chicago95/devices/scalable/computer-laptop.svg');
+}
+
+#cpu {
+    background-image: url('/home/mattsu014/Chicago95/Icons/Chicago95/devices/scalable/processor.svg');
+}
+
+#temperature {
+    background-image: url('/home/mattsu014/Chicago95/Icons/Chicago95/status/scalable/weather-few-clouds.svg');
+}
+
+#clock {
+    padding: 2px 6px 2px 8px;
+    margin: 2px 3px;
+    min-height: 20px;
+    min-width: 80px;
+    background-color: #b0b0b0;
+    color: #000000;
+    font-size: 12px;
+    border-left: 0.5px solid #000000;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    box-shadow: -1px -0.5px 0px 0px #000000;
+    background-image: url("/home/mattsu014/Chicago95/Icons/Chicago95/apps/scalable/clock.svg");
+    background-position: right center;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
