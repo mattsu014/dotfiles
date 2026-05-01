@@ -1,5 +1,9 @@
 # 🐧 Arch 95 - Hyprland OS + Windows 95 Theme 🐧
 
+---
+![Desktop](./screenshots/osPrint.jpg)
+---
+
 ## 🌎 Languages
 
 * [Português (Brasil) 🇧🇷](./README-pt-br.md)
@@ -26,16 +30,6 @@ I created this configuration with the goal of recreating the classic Windows 95 
 * **Launcher:** Rofi
 * **Editor:** VS Code / Nano
 * **Browser:** Vivaldi (with a custom theme)
-
----
-
-## 🎨 Screenshots
-
-![Desktop](./screenshots/osPrint.jpg)
-![Screenshot 1](./screenshots/osPrint1.jpg)
-![Screenshot 2](./screenshots/osPrint2.jpg)
-![Screenshot 3](./screenshots/osPrint3.jpg)
-![Screenshot 4](./screenshots/osPrint4.jpg)
 
 ---
 
