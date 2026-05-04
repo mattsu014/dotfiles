@@ -28,7 +28,7 @@ I created this configuration with the goal of recreating the classic Windows 95 
 
 * **Terminal:** Kitty
 * **Launcher:** Rofi
-* **Editor:** VS Code / Nano
+* **Editor:** * [Neovim](https://github.com/mattsu014/neovim) / Nano
 * **Browser:** Vivaldi (with a custom theme)
 
 ---
